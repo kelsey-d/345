@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,800&family=Share&display=swap" rel="stylesheet">
+	<style>
+		html, body {
+			text-align: center;
+			align-content: center;
+			width: 90%;
+			font-family: Share;
+		}
+		header {
+			background-color: #DFC0E9;
+			font-size: 50px;
+			font-family: "Playfair Display";
+			padding-bottom: 5px;
+		}
+
+		nav {
+			font-family: 'Share';
+			border-top: 1px solid black;
+			border-bottom: 1px solid black;
+			padding: 5px 0px 5px;
+		}
+
+		#container {
+			display: inline-block;
+
+		}
+
+		.grid-container{
+			padding: 5px 0px 5px;
+			display: grid;
+			height: 100vh;
+			grid-template-columns: 2fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			grid-template-areas: "top-stories breaking-news"
+			"more-news breaking-news";
+			grid-gap: 0.5rem;
+		}
+
+		#top-stories {
+			background-color: #DCE8AC;
+			grid-area: top-stories;
+		}
+
+		#breaking-news {
+			background-color: #B8C28F;
+			grid-area: breaking-news;
+		}
+
+		#more-news {
+			background-color: #939C73;
+			grid-area: more-news;
+		}						
+	</style>	
+</head>
+<body>
+	<div id=container>
+	<header>DAILY NEWS</header>
+	<nav>SPORTS | ENTERTAINMENT | POLITICS | BUSINESS | TECHNOLOGY </nav>
+	<div class=grid-container>
+		<div id=top-stories><h2>TOP STORIES</h2></div>
+		<div id=breaking-news><h2>BREAKING NEWS</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus risus non ultrices ultricies. Vivamus interdum aliquam pharetra. Fusce ut risus aliquet, congue massa ut, tincidunt ex. Aliquam dictum condimentum vestibulum. Nunc id nisi euismod, rutrum ligula nec, vehicula lorem. Nullam tempus ipsum eros, et rhoncus ipsum accumsan vel. Aenean commodo maximus odio et viverra. Mauris pretium nulla ex, a suscipit elit finibus in. Sed suscipit, sem vitae ornare viverra, enim nibh lobortis ligula, rhoncus lacinia est dui a augue. Donec non accumsan lacus. Nulla est purus, condimentum ornare quam eget, egestas ullamcorper justo. Aliquam ac purus nisl.
+
+Sed aliquet consectetur mi ullamcorper lacinia. Sed scelerisque, urna vitae rhoncus gravida, nibh eros tincidunt ipsum, eget eleifend tortor erat quis enim. Donec consectetur odio sed ipsum venenatis, auctor euismod nisi egestas. Cras tincidunt sapien et tempor ultrices. Nulla facilisi. Integer purus sem, porttitor eu lacus vitae, commodo posuere ex. Integer eget consequat elit.
+</p></div>
+		<div id=more-news><h2>MORE NEWS</h2></div>
+	</div>
+</body>
+</html>

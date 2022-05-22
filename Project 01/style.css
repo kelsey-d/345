@@ -1,0 +1,102 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	display: inline-flex;
+	background-color: black;	
+	overflow: hidden;
+	font-family: 'Press Start 2P';
+}
+
+.photos {
+	width: 50%;
+	height: 100%;
+	overflow-y: scroll;
+	right:0;
+	background-color: #BF1C2D;
+	position: absolute;	
+	text-align: center;
+
+}
+.names {
+	width: 10%;
+	height: 100%;
+	margin-left: 40%;
+	color: white;
+	postion: absolute;
+	z-index: 2;
+	font-size: 75px;
+}
+
+
+.info {
+	width: 40%;
+	height: 100%;
+	position: absolute;	
+	left: 0%;
+}
+
+.header {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #BF1C2D;
+	font-size: 75px;
+	
+}
+
+.info-inner {
+	padding: 10px 0px 10px 10px;
+	position: absolute;
+	text-align: center;
+	color: white;
+	width: 100%;
+	height: 83%;
+	font-family: 'VT323';
+	font-size: 25px;
+}
+.track-list {
+	display: flex;
+	justify-content: center;
+}
+
+.col {
+	padding: 0px 25px 0px;
+}
+
+.image {
+	padding: 10px 0px 10px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #F8F8F8;
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.photos::-webkit-scrollbar-thumb:vertical
+{
+    background: black;
+  border-radius: 10px;
+}
+
+.info-inner::-webkit-scrollbar-thumb:vertical
+{
+    background: #F7C700;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.photos::-webkit-scrollbar-thumb:hover {
+  background: #373737; 
+}
+
+.info-inner::-webkit-scrollbar-thumb:hover {
+  background: #907A20; 
+}

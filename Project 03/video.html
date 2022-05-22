@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Times Capsule | Creative Time At 44 1/2</title>
+	<link rel="icon" href="media/" type="image/">
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">	
+	<link rel="stylesheet" href="css/project.css">
+	<style>
+
+		@font-face {
+    font-family: 'NEON LED Light';
+    src: url('NEONLEDLight.ttf');
+    src: url('NEONLEDLight.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans Condensed';
+    src: url('OpenSansCondensed-Bold.ttf');
+    src: url('OpenSansCondensed-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans Condensed';
+    src: url('OpenSansCondensed-Light.ttf');
+    src: url('OpenSansCondensed-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+		iframe {
+			z-index: 0;
+		}
+
+	</style>
+</head>
+<body id=b>
+	<nav class="navbar justify-content-center w-100">
+		<a class="navbar-brand text-center" href="index.html">Times <br> Capsule</a>
+	</nav>
+	<div class=menu>
+		<img src="media/search.png" style="width: 50%;">
+		<img onclick="popup()" src="media/info.png" style="width: 50%;">
+		<img onclick="change('prev')" src="media/prev.png" style="width: 50%;">
+		<img onclick="change('next')" src="media/next.png" style="width: 50%;">		
+	</div>
+	<div class=black-out></div>
+	<div class=popup>
+		<h6 onclick="exit()">☒</h6>
+		<div class=description>			
+			<h3>Title of Piece</h3><h5>00/0000 - 00/0000</h5>
+			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula mauris eget risus ultricies consequat. Nam venenatis malesuada lorem. Nullam facilisis nisl sit amet egestas aliquet. Maecenas id lectus tempus, eleifend libero et, sollicitudin leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque eu sodales augue, non blandit enim. Aliquam convallis sed neque id tempor. Donec ut tristique arcu, quis dapibus leo.</p>
+			<img src="media/poseidan.jpg">
+			<h3>Artist Bio</h3>
+			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula aliquet arcu non volutpat. Aliquam imperdiet neque sit amet tellus mattis tempus. Mauris ac dui vitae dolor maximus maximus. Aenean dignissim nibh nec diam semper facilisis. Nunc commodo leo risus. Aenean rhoncus nisi metus. Maecenas sed sem auctor, sodales est ac, dictum lorem. Donec convallis, turpis vel lacinia condimentum, justo mauris vulputate enim, eu suscipit justo tellus in nulla. Integer ornare nec est at ullamcorper. Vestibulum porta tincidunt neque eget dapibus.
+
+			Mauris at nibh quam. Nulla porta vitae diam tristique porta. Fusce ultrices nulla ut diam vestibulum, ac venenatis lectus dictum. Pellentesque pharetra dui vel ligula molestie maximus. Sed in mauris malesuada, commodo justo nec, consequat orci. Ut aliquam, magna non pharetra hendrerit, magna ipsum commodo justo, ac sagittis nisi risus ut nunc. Ut non pharetra ante. Nam sodales ornare erat sed lacinia. Cras hendrerit at nulla quis volutpat. Aenean rutrum tellus eu vulputate semper. Etiam tempus aliquam dui non scelerisque. Proin a urna blandit, commodo ex sit amet, finibus tellus. Nullam ut magna lobortis, sodales urna at, faucibus nibh. In eros tortor, mattis non justo id, pretium sodales erat. Mauris cursus posuere bibendum.
+			</p>
+		</div>
+	</div>	
+	<iframe id="player" width="100%" height="100%" src="https://www.youtube.com/embed/GoiFFfu_bMg?rel=0&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+<!-- 	<div id="player"></div>
+ -->	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>	
+	<script type="text/javascript">
+		function exit()  {
+			document.getElementsByClassName("popup")[0].style.visibility = "hidden";
+			document.getElementsByClassName("black-out")[0].style.visibility = "hidden";
+		}
+
+		function popup()  {
+			document.getElementsByClassName("popup")[0].style.visibility = "visible";
+			document.getElementsByClassName("black-out")[0].style.visibility = "visible";
+		}
+
+	var i = 0;
+		var vids = ["https://www.youtube.com/embed/GoiFFfu_bMg?rel=0&controls=0", "https://www.youtube.com/embed/W28-7By00rU?rel=0&controls=0", "https://www.youtube.com/embed/iWjkqFkhiqg?rel=0&controls=0"];
+		function change(direction){
+
+			if (direction == "next" && i+1<=vids.length-1){
+				i++;
+				document.getElementsByTagName("iframe")[0].src = vids[i]; 
+
+			}
+			else if (direction == "prev" && i-1>=0){
+				i--;
+				document.getElementsByTagName("iframe")[0].src = vids[i]; 		
+			}
+			else {
+				console.log(i);
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'Championship';
+    src: url('Championship.ttf');
+    src: url('Championship.ttf') format('truetype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TradeGothic LT';
+    src: url('Trade Gothic LT.ttf');
+    src: url('Trade Gothic LT.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TradeGothic LT CondEighteen';
+    src: url('Trade Gothic LT Condensed No. 18.ttf');
+    src: url('Trade Gothic LT Condensed No. 18.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+	font-family: "TradeGothic LT";
+	overflow-x: hidden;
+}
+nav {
+	margin: 0 5% 0;
+}
+.login {
+	text-align: right;
+}
+ .logo {
+ 	text-align: center;
+}
+
+
+
+.nav-bar {
+	list-style: none;
+	display: flex;
+	font-family: "TradeGothic LT CondEighteen";
+	font-size: 25px;
+	padding: 15px;
+	border-top:solid 2px #1D3A83;
+	border-bottom:solid 2px #1D3A83;
+}
+
+.nav-bar li{
+	color: blue;
+	padding-right: 25px;
+}
+
+
+.nav-bar a:link {
+	text-decoration: none;
+}
+
+.nav-bar a:visited {
+	color:inherit;
+}
+
+.nav-bar a:hover {
+	border-bottom: solid 2px black;
+}
+
+.nav-bar form {
+	display: inline-block;
+	overflow: auto;
+	height:43px;
+	margin-left: auto;
+	float: right;
+	border: solid 2px #e0e0e0;
+
+}
+.nav-bar input, .nav-bar button{
+	background-color: transparent;
+	outline: none;
+  border: none;
+	color: #e0e0e0;  
+}  
+.promo{
+	margin: 0%;
+	height: 640px;
+	background-image: url("hoodie.jpg");
+	background-size: 100%;
+
+}
+/*.slogan-bg {
+	position: absolute;
+	z-index: -1;
+	font-size: 250px;
+	font-family: "Championship";
+	opacity: 75%;
+	background: -webkit-linear-gradient(#000, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}*/
+.slogan {
+	text-align: center;
+	z-index: -1;
+	font-size: 200px;
+	font-family: "Championship";
+	background: -webkit-linear-gradient(#7A213F, #C4262E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-name: rainbow;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rainbow{
+	12% {background: -webkit-linear-gradient(#C4262E,#ea4d33);  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;}
+	24% {background: -webkit-linear-gradient(#ea4d33, #FFD029);  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;}
+	36% {background: -webkit-linear-gradient(#FFD029, #008155);  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;}
+	48% {background: -webkit-linear-gradient(#008155, #00B1DA);  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;}
+	60% {background: -webkit-linear-gradient(#00B1DA, #0054C8);  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;}
+	72% {background: -webkit-linear-gradient(#0054C8, #070044);  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;}
+	84% {background: -webkit-linear-gradient(#070044, #4E2E91);  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;}
+	96% {background: -webkit-linear-gradient(#4E2E91, #7A213F);  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;}
+}
+
+.box {
+	display: flex;
+	justify-content: center;
+	width: 150px;
+	height: 150px;
+	background-color: white;
+	border: solid 2px #E0E0E0;
+}
+.box:hover{
+	border: solid 2px blue;
+}
+.box img {
+	max-width: 100%; 
+	height: auto;
+	align-self: center;
+}
+.footer{
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Arial;
+  font-size: 21px;
+}
+.footer p{
+	margin-top: 10px;
+}
+.footer button{
+	margin-top: 10px;
+	background-color: black;
+	color: white;
+}
+.other {
+
+	display: flex;
+
+}
+
+.other div {
+	padding: 10px 100px 0px;
+	color: #1D3A83;
+}
+
+@media (max-width: 564px){
+	.nav-bar{
+		display:none;
+	}
+	.other {
+
+	display: block;
+
+	}
+	.slogan {
+		font-size: 500%;
+	}
+}

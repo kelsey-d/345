@@ -1,0 +1,98 @@
+html, body{
+	overflow-x: hidden;
+	margin:0;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width:100%;
+	background-color: black;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	color: inherit;
+}
+h3 {
+	font-weight: bold;
+}
+#b .navbar{
+	position: absolute;
+	z-index: 1;
+}
+
+#b .navbar-brand {
+	font-family: "NEON LED Light";
+	font-size: 500%;
+	line-height: 0.7;
+	color: white;
+}
+.menu {
+	position:absolute;
+	align-self: flex-end;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 1;
+}
+
+.menu img {
+	padding-top: 100px;
+}
+.menu img:hover {
+	cursor: pointer;
+}
+
+.black-out {
+	position: absolute;
+	width:100%;
+	height:100%;
+	background-color: black;
+	opacity: 75%;
+	z-index: 1;
+	visibility: hidden;
+}
+.popup {
+	position: absolute;
+	display: flex;
+	z-index: 2;
+	align-self: center;
+	justify-content: center;
+	background-image: url("../media/graph-paper.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+	width:90%;
+	height: 90%;
+	visibility: hidden;
+}
+
+.description{
+	font-family: "Open Sans Condensed";
+	align-self: center;
+	padding: 25px;
+	position: absolute;
+	top: 29%;
+	width: 80%;
+	height: 47%;
+/*	transform: rotate(1deg);*/
+	overflow-y: scroll;
+}
+
+.description img{
+	float: right;
+} 
+
+.popup h6 {
+	position: absolute;
+	top: 15%;
+	right: 15%;
+	font-size: 50px;
+	z-index: 3;
+}
+
+.popup h6:hover{
+	cursor: pointer;
+}
